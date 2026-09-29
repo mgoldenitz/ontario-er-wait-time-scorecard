@@ -1,0 +1,21 @@
+﻿"Average length of stay in emergency for low-urgency patients not admitted to hospital, by hospital,  202507 to 202607"
+Average Time
+
+Hospital Name: Trillium Health Partners-Queensway Hlth
+"Month",Ontario (Hours),Trillium Health Partners-Queensway Hlth (Hours)
+"202507","3.1","2"
+"202508","3","2.1"
+"202509","3.1","1.9"
+"202510","3","2"
+"202511","3.1","2"
+"202512","3.3","2.2"
+"202601","3","2"
+"202602","3","1.9"
+"202603","3","2"
+"202604","3.1","2"
+"202605","3.1","1.8"
+"202606","3.1","2.1"
+"202607","3.2","2"
+
+
+"Data source: National Ambulatory Care Reporting System (NACRS), Canadian Institute for Health Information (CIHI)." 

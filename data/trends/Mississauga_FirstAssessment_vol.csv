@@ -1,0 +1,21 @@
+﻿"Number of patients who waited for first assessment by a doctor in emergency, by hospital,  202507 to 202607"
+Volume
+
+Hospital Name: Trillium Health Partners-Mississauga
+"Month",Ontario (Volume),Trillium Health Partners-Mississauga (Volume)
+"202507","520868","9566"
+"202508","514228","9572"
+"202509","506162","9276"
+"202510","510256","9334"
+"202511","491853","8906"
+"202512","534778","10110"
+"202601","478016","8847"
+"202602","447220","7989"
+"202603","503827","9079"
+"202604","504657","9083"
+"202605","515075","9635"
+"202606","515830","9553"
+"202607","528353","9893"
+
+
+"Data source: National Ambulatory Care Reporting System (NACRS), Canadian Institute for Health Information (CIHI)." 

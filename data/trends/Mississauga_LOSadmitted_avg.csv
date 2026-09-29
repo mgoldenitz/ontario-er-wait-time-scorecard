@@ -1,0 +1,21 @@
+﻿"Average length of stay in emergency for patients admitted to hospital, by hospital,  202507 to 202607"
+Average Time
+
+Hospital Name: Trillium Health Partners-Mississauga
+"Month",Ontario (Hours),Trillium Health Partners-Mississauga (Hours)
+"202507","17.4","24.8"
+"202508","17.6","29.6"
+"202509","18.7","32"
+"202510","17.8","22.1"
+"202511","18.4","20.6"
+"202512","19.8","19.3"
+"202601","20.3","24.8"
+"202602","18.6","23.9"
+"202603","17.2","19.4"
+"202604","17.2","17.5"
+"202605","17","20.1"
+"202606","16.8","20.8"
+"202607","17.7","20.9"
+
+
+"Data source: National Ambulatory Care Reporting System (NACRS), Canadian Institute for Health Information (CIHI)." 

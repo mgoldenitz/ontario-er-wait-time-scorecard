@@ -1,0 +1,21 @@
+﻿"Number of patients who waited for first assessment by a doctor in emergency, by hospital,  202507 to 202607"
+Volume
+
+Hospital Name: Trillium Health Partners-Credit Valley
+"Month",Ontario (Volume),Trillium Health Partners-Credit Valley (Volume)
+"202507","520868","9590"
+"202508","514228","9363"
+"202509","506162","9204"
+"202510","510256","9423"
+"202511","491853","9170"
+"202512","534778","9910"
+"202601","478016","8970"
+"202602","447220","8393"
+"202603","503827","9357"
+"202604","504657","9470"
+"202605","515075","9997"
+"202606","515830","9830"
+"202607","528353","9961"
+
+
+"Data source: National Ambulatory Care Reporting System (NACRS), Canadian Institute for Health Information (CIHI)." 

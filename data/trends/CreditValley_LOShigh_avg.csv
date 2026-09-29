@@ -1,0 +1,21 @@
+﻿"Average length of stay in emergency for high-urgency patients not admitted to hospital, by hospital,  202507 to 202607"
+Average Time
+
+Hospital Name: Trillium Health Partners-Credit Valley
+"Month",Ontario (Hours),Trillium Health Partners-Credit Valley (Hours)
+"202507","4.7","5.4"
+"202508","4.6","5.5"
+"202509","4.6","5.7"
+"202510","4.5","5.2"
+"202511","4.5","5.2"
+"202512","4.7","5.5"
+"202601","4.5","5.4"
+"202602","4.5","5.4"
+"202603","4.5","5.5"
+"202604","4.5","5.6"
+"202605","4.5","5.6"
+"202606","4.6","5.7"
+"202607","4.7","5.7"
+
+
+"Data source: National Ambulatory Care Reporting System (NACRS), Canadian Institute for Health Information (CIHI)." 

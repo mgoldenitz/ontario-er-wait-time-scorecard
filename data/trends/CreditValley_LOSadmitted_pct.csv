@@ -1,0 +1,21 @@
+﻿"Percentage of patients admitted to hospital from emergency  within the provincial target time, by hospital,  202507 to 202607"
+Percentage within target
+
+Hospital Name: Trillium Health Partners-Credit Valley
+"Month",Ontario (Percent),Trillium Health Partners-Credit Valley (Percent)
+"202507","28.5","14.5"
+"202508","28.9","13.0"
+"202509","27.9","11.8"
+"202510","28.9","15.7"
+"202511","29.1","14.5"
+"202512","25.9","12.4"
+"202601","26.3","11.2"
+"202602","28.5","12.6"
+"202603","29.4","13.6"
+"202604","29.6","14.4"
+"202605","29.8","12.9"
+"202606","29.6","14.2"
+"202607","28.2","15.4"
+
+
+"Data source: National Ambulatory Care Reporting System (NACRS), Canadian Institute for Health Information (CIHI)." 

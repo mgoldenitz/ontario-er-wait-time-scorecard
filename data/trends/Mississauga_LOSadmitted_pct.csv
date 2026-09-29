@@ -1,0 +1,21 @@
+﻿"Percentage of patients admitted to hospital from emergency  within the provincial target time, by hospital,  202507 to 202607"
+Percentage within target
+
+Hospital Name: Trillium Health Partners-Mississauga
+"Month",Ontario (Percent),Trillium Health Partners-Mississauga (Percent)
+"202507","28.5","18.4"
+"202508","28.9","16.0"
+"202509","27.9","14.9"
+"202510","28.9","25"
+"202511","29.1","26.8"
+"202512","25.9","27.1"
+"202601","26.3","23.0"
+"202602","28.5","23.2"
+"202603","29.4","29.3"
+"202604","29.6","30.8"
+"202605","29.8","25.9"
+"202606","29.6","24.2"
+"202607","28.2","27.4"
+
+
+"Data source: National Ambulatory Care Reporting System (NACRS), Canadian Institute for Health Information (CIHI)." 

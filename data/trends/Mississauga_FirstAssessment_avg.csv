@@ -1,0 +1,21 @@
+﻿"Average time all patients waited for first assessment by a doctor in emergency, by hospital,  202507 to 202607"
+Average Time
+
+Hospital Name: Trillium Health Partners-Mississauga
+"Month",Ontario (Hours),Trillium Health Partners-Mississauga (Hours)
+"202507","2","1.5"
+"202508","1.9","1.5"
+"202509","2","1.6"
+"202510","1.9","1.4"
+"202511","1.8","1.5"
+"202512","2.1","1.6"
+"202601","1.7","1.4"
+"202602","1.8","1.4"
+"202603","1.8","1.3"
+"202604","1.9","1.3"
+"202605","1.9","1.4"
+"202606","1.9","1.5"
+"202607","2","1.5"
+
+
+"Data source: National Ambulatory Care Reporting System (NACRS), Canadian Institute for Health Information (CIHI)." 

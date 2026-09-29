@@ -1,0 +1,21 @@
+﻿"Number of low-urgency patients in emergency who were not admitted to hospital, by hospital,  202507 to 202607"
+Volume
+
+Hospital Name: Trillium Health Partners-Mississauga
+"Month",Ontario (Volume),Trillium Health Partners-Mississauga (Volume)
+"202507","119939","1314"
+"202508","117526","1327"
+"202509","108453","1213"
+"202510","106044","1213"
+"202511","94744","1006"
+"202512","96683","1176"
+"202601","89690","1141"
+"202602","83969","972"
+"202603","94922","1076"
+"202604","96257","1178"
+"202605","105162","1166"
+"202606","108100","1253"
+"202607","112311","1460"
+
+
+"Data source: National Ambulatory Care Reporting System (NACRS), Canadian Institute for Health Information (CIHI)." 

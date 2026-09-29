@@ -1,0 +1,21 @@
+﻿"Percentage of low-urgency patients not admitted to hospital who finished their emergency visit within the provincial target time, by hospital,  202507 to 202607"
+Percentage within target
+
+Hospital Name: Trillium Health Partners-Mississauga
+"Month",Ontario (Percent),Trillium Health Partners-Mississauga (Percent)
+"202507","74.5","77.3"
+"202508","75.3","74.5"
+"202509","74.3","72.0"
+"202510","75.5","72.6"
+"202511","75.5","73.7"
+"202512","72.2","63.4"
+"202601","76.6","74.4"
+"202602","76.2","75"
+"202603","75.7","75.3"
+"202604","75.1","75.9"
+"202605","74.9","72.9"
+"202606","74.7","72.2"
+"202607","72.9","69.7"
+
+
+"Data source: National Ambulatory Care Reporting System (NACRS), Canadian Institute for Health Information (CIHI)." 

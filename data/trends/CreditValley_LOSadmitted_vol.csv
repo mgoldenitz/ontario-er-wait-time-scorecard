@@ -1,0 +1,21 @@
+﻿"Number of patients admitted to hospital from emergency department, by hospital,  202507 to 202607"
+Volume
+
+Hospital Name: Trillium Health Partners-Credit Valley
+"Month",Ontario (Volume),Trillium Health Partners-Credit Valley (Volume)
+"202507","63721","1533"
+"202508","62463","1478"
+"202509","62157","1521"
+"202510","64370","1527"
+"202511","63209","1560"
+"202512","70931","1736"
+"202601","65472","1625"
+"202602","59562","1434"
+"202603","66281","1690"
+"202604","64760","1681"
+"202605","64549","1655"
+"202606","63625","1629"
+"202607","64708","1653"
+
+
+"Data source: National Ambulatory Care Reporting System (NACRS), Canadian Institute for Health Information (CIHI)." 

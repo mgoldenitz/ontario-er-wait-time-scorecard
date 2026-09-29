@@ -1,0 +1,21 @@
+﻿"Number of patients admitted to hospital from emergency department, by hospital,  202507 to 202607"
+Volume
+
+Hospital Name: Trillium Health Partners-Mississauga
+"Month",Ontario (Volume),Trillium Health Partners-Mississauga (Volume)
+"202507","63721","1613"
+"202508","62463","1546"
+"202509","62157","1534"
+"202510","64370","1564"
+"202511","63209","1483"
+"202512","70931","1694"
+"202601","65472","1624"
+"202602","59562","1474"
+"202603","66281","1579"
+"202604","64760","1609"
+"202605","64549","1666"
+"202606","63625","1610"
+"202607","64708","1638"
+
+
+"Data source: National Ambulatory Care Reporting System (NACRS), Canadian Institute for Health Information (CIHI)." 

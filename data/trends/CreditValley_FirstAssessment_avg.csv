@@ -1,0 +1,21 @@
+﻿"Average time all patients waited for first assessment by a doctor in emergency, by hospital,  202507 to 202607"
+Average Time
+
+Hospital Name: Trillium Health Partners-Credit Valley
+"Month",Ontario (Hours),Trillium Health Partners-Credit Valley (Hours)
+"202507","2","2.4"
+"202508","1.9","2.4"
+"202509","2","2.6"
+"202510","1.9","2.1"
+"202511","1.8","2.2"
+"202512","2.1","2.7"
+"202601","1.7","2.2"
+"202602","1.8","2.3"
+"202603","1.8","2.3"
+"202604","1.9","2.4"
+"202605","1.9","2.5"
+"202606","1.9","2.7"
+"202607","2","2.7"
+
+
+"Data source: National Ambulatory Care Reporting System (NACRS), Canadian Institute for Health Information (CIHI)." 

@@ -1,0 +1,21 @@
+﻿"Number of low-urgency patients in emergency who were not admitted to hospital, by hospital,  202507 to 202607"
+Volume
+
+Hospital Name: Trillium Health Partners-Queensway Hlth
+"Month",Ontario (Volume),Trillium Health Partners-Queensway Hlth (Volume)
+"202507","119939","624"
+"202508","117526","720"
+"202509","108453","589"
+"202510","106044","620"
+"202511","94744","528"
+"202512","96683","561"
+"202601","89690","505"
+"202602","83969","471"
+"202603","94922","615"
+"202604","96257","579"
+"202605","105162","639"
+"202606","108100","706"
+"202607","112311","710"
+
+
+"Data source: National Ambulatory Care Reporting System (NACRS), Canadian Institute for Health Information (CIHI)." 

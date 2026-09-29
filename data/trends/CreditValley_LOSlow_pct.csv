@@ -1,0 +1,21 @@
+﻿"Percentage of low-urgency patients not admitted to hospital who finished their emergency visit within the provincial target time, by hospital,  202507 to 202607"
+Percentage within target
+
+Hospital Name: Trillium Health Partners-Credit Valley
+"Month",Ontario (Percent),Trillium Health Partners-Credit Valley (Percent)
+"202507","74.5","72.5"
+"202508","75.3","72.2"
+"202509","74.3","64.3"
+"202510","75.5","67.2"
+"202511","75.5","65.9"
+"202512","72.2","68.1"
+"202601","76.6","68.7"
+"202602","76.2","65.3"
+"202603","75.7","65.1"
+"202604","75.1","66.3"
+"202605","74.9","62.0"
+"202606","74.7","64.8"
+"202607","72.9","60.9"
+
+
+"Data source: National Ambulatory Care Reporting System (NACRS), Canadian Institute for Health Information (CIHI)." 

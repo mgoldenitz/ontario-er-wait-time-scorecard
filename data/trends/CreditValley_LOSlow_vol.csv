@@ -1,0 +1,21 @@
+﻿"Number of low-urgency patients in emergency who were not admitted to hospital, by hospital,  202507 to 202607"
+Volume
+
+Hospital Name: Trillium Health Partners-Credit Valley
+"Month",Ontario (Volume),Trillium Health Partners-Credit Valley (Volume)
+"202507","119939","1148"
+"202508","117526","1121"
+"202509","108453","1087"
+"202510","106044","1003"
+"202511","94744","880"
+"202512","96683","846"
+"202601","89690","789"
+"202602","83969","860"
+"202603","94922","883"
+"202604","96257","908"
+"202605","105162","1003"
+"202606","108100","1062"
+"202607","112311","1080"
+
+
+"Data source: National Ambulatory Care Reporting System (NACRS), Canadian Institute for Health Information (CIHI)." 

@@ -1,0 +1,21 @@
+﻿"Number of patients who waited for first assessment by a doctor in emergency, by hospital,  202507 to 202607"
+Volume
+
+Hospital Name: Trillium Health Partners-Queensway Hlth
+"Month",Ontario (Volume),Trillium Health Partners-Queensway Hlth (Volume)
+"202507","520868","1926"
+"202508","514228","2041"
+"202509","506162","1939"
+"202510","510256","1983"
+"202511","491853","1815"
+"202512","534778","2069"
+"202601","478016","1825"
+"202602","447220","1691"
+"202603","503827","1996"
+"202604","504657","2098"
+"202605","515075","2142"
+"202606","515830","2199"
+"202607","528353","2231"
+
+
+"Data source: National Ambulatory Care Reporting System (NACRS), Canadian Institute for Health Information (CIHI)." 

@@ -1,0 +1,21 @@
+﻿"Percentage of high-urgency patients not admitted to hospital who finished their emergency visit within the provincial target time, by hospital,  202507 to 202607"
+Percentage within target
+
+Hospital Name: Trillium Health Partners-Queensway Hlth
+"Month",Ontario (Percent),Trillium Health Partners-Queensway Hlth (Percent)
+"202507","87.6","100"
+"202508","88.0","100"
+"202509","88.1","100"
+"202510","88.9","100"
+"202511","89.6","99.9"
+"202512","88.0","100"
+"202601","89.4","100"
+"202602","89.5","100"
+"202603","89.1","100"
+"202604","89.2","100"
+"202605","89.1","100"
+"202606","88.9","100"
+"202607","87.7","100"
+
+
+"Data source: National Ambulatory Care Reporting System (NACRS), Canadian Institute for Health Information (CIHI)." 
