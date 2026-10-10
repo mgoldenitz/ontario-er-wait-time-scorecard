@@ -9,11 +9,11 @@ A five-page Power BI scorecard comparing emergency department (ED) wait times at
 - **Admitted patients wait longest.** Only **15.4%** of admitted patients at Credit Valley and **27.4%** at Mississauga leave the ED within the 8-hour target (Ontario: 28.2%; provincial goal: 90%).
 - **Credit Valley ranks in the bottom fifth of Ontario EDs on every measure**, including **#147 of 154** for admitted patients' time in the ED (26.0 h vs 17.7 h provincially).
 - **The problem is regional.** Nearby Osler Etobicoke (27.2 h, #148) and Brampton Civic (30.1 h, #150) rank even lower, while Humber River (13.3 h) and Halton Milton (16.2 h) beat the Ontario average. The pattern points to inpatient bed pressure across Peel.
-- **Volume and patient mix don't explain the gap.** Mississauga and Credit Valley each see about **9,300–9,400 visits a month**, with about **17%** of patients admitted at each, yet Credit Valley waits longer on every measure.
+- **Volume and patient mix don't explain the gap.** Mississauga and Credit Valley each see about **9,300–9,400 visits a month**, with about **17%** of patients admitted at each, yet Credit Valley waits longer on every measure. A regression across 26 site-months confirms it: Credit Valley's admitted patients spend **7.3 h** longer in the ED than Mississauga's, and after adjusting for monthly volume and patient mix the gap is still **8.3 h** (95% CI 2.2 to 14.5).
 - **Busier months slow the front door, not admissions.** Time to first doctor rises with monthly volume (r = 0.48–0.62), but admitted patients' time in the ED doesn't (r = −0.10 to −0.60). That's consistent with bed availability, not ED demand, driving admitted-patient delays.
 - **Mississauga improved.** Its admitted patients' average ED time fell by **3.9 h** year over year, from a peak of 32.0 h in September 2025 to 20.9 h in July 2026.
 
-With 13 months per site, the volume–wait patterns are exploratory rather than proof of cause.
+With 13 months per site, the volume–wait patterns and the regression are exploratory rather than proof of cause.
 
 ## Report pages
 
@@ -36,6 +36,7 @@ With 13 months per site, the volume–wait patterns are exploratory rather than 
 - **DAX:** latest-month values, Ontario benchmark (`CALCULATE`), gap to Ontario, target status, provincial rank with ties, year-over-year change (`EDATE`), dynamic titles, and colour measures for conditional formatting
 - **Design:** synced slicers, edited visual interactions, dynamic chart titles, a constant goal line, and a custom theme shared with my previous project
 - **Python** (pandas): `er_analysis.py` rebuilds the data model from the raw exports and reproduces every number in the report, including the patient mix and the volume–wait correlations
+- **Regression** (statsmodels): ordinary least squares with robust (HC3) standard errors, testing whether Credit Valley's gap shrinks once monthly volume, share admitted and share of high-urgency patients are controlled for. It doesn't: the admitted-patient gap goes from 7.3 h unadjusted to 8.3 h adjusted (9.4 h when Ontario's monthly level is also included), and the time-to-first-doctor gap stays at about 0.9 h
 - **Validation:** a hidden QA page in the report, cross-checked against the Python output
 
 ## Repository contents
@@ -44,7 +45,7 @@ With 13 months per site, the volume–wait patterns are exploratory rather than 
 |---|---|
 | `ER_Wait_Time_Scorecard.pbix` | Power BI report (open with Power BI Desktop) |
 | `Goldenitz_ER_Wait_Time_Scorecard.pdf` | Static PDF of all five pages |
-| `er_analysis.py` | Python validation and statistics |
+| `er_analysis.py` | Python validation, statistics and regression |
 | `data/trends/` | 30 monthly CSV exports, named `Site_Measure_Metric.csv` (avg = average hours, pct = % within target, vol = patient count) |
 | `data/hospital_rankings_2026-07.xlsx` | July 2026 hospital comparison table, one sheet per measure |
 | `images/` | Page screenshots |
@@ -53,7 +54,7 @@ With 13 months per site, the volume–wait patterns are exploratory rather than 
 
 **Power BI:** open the `.pbix` in Power BI Desktop. To refresh, go to **Transform data → Data source settings** and point the two sources to your copies of `data/trends/` and `data/hospital_rankings_2026-07.xlsx`.
 
-**Python:** install pandas, numpy and openpyxl (`pip install pandas numpy openpyxl`), then run `python er_analysis.py` from the repository folder.
+**Python:** install pandas, numpy, openpyxl and statsmodels (`pip install pandas numpy openpyxl statsmodels`), then run `python er_analysis.py` from the repository folder.
 
 ## Data
 

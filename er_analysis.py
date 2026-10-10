@@ -5,11 +5,12 @@ Rebuilds the Power BI data model from the raw Ontario Health exports and
 reproduces the key numbers in the report, so they can be checked independently.
 
 Run from the repository folder:   python er_analysis.py
-Needs: pandas, numpy, openpyxl  (pip install pandas numpy openpyxl)
+Needs: pandas, numpy, openpyxl, statsmodels  (pip install pandas numpy openpyxl statsmodels)
 """
 from pathlib import Path
 import numpy as np
 import pandas as pd
+import statsmodels.formula.api as smf
 
 DATA = Path(__file__).parent / "data"
 SITES = {"Mississauga": "Mississauga", "CreditValley": "Credit Valley", "Queensway": "Queensway (UCC)"}
@@ -111,3 +112,42 @@ for loc in ["Credit Valley", "Mississauga"]:
 
 median_admitted = rankings.query("Measure == 'LOSadmitted' and Hospital != 'Ontario'")["Avg_Hours"].median()
 print(f"\nMedian Ontario ED, admitted patients' length of stay: {median_admitted:.1f} h")
+
+
+# ---- 5. Is the Credit Valley gap explained by volume or patient mix? (regression) ----
+# One row per site-month for Mississauga and Credit Valley (2 sites x 13 months = 26 rows;
+# Queensway is an urgent care centre with no admissions). The site coefficient is Credit
+# Valley's gap in hours relative to Mississauga. If busier months or a sicker patient mix
+# explained the gap, it would shrink once those are in the model. HC3 robust standard errors
+# because the sample is small. Exploratory: 26 rows, and months within a site aren't independent.
+wide = (trends[trends["Location"].isin(["Mississauga", "Credit Valley", "Ontario"])]
+        .pivot_table(index=["Location", "Date"], columns=["Measure", "Metric"], values="Value"))
+wide.columns = [f"{m}_{k}" for m, k in wide.columns]
+wide = wide.reset_index()
+ontario = wide[wide["Location"] == "Ontario"].set_index("Date")
+reg = wide[wide["Location"] != "Ontario"].copy()
+reg["site"] = pd.Categorical(reg["Location"], ["Mississauga", "Credit Valley"])
+reg["visits_k"] = reg["FirstAssessment_vol"] / 1000                                    # monthly visits (thousands)
+reg["pct_admitted"] = 100 * reg["LOSadmitted_vol"] / reg["FirstAssessment_vol"]        # % of visits admitted
+reg["pct_high"] = 100 * reg["LOShigh_vol"] / reg["FirstAssessment_vol"]                # % high urgency, sent home
+reg["ontario_admitted"] = reg["Date"].map(ontario["LOSadmitted_avg"])                  # province-wide monthly level
+
+MODELS = [
+    ("Admitted patients' time in ED", "LOSadmitted_avg", "unadjusted", ""),
+    ("Admitted patients' time in ED", "LOSadmitted_avg", "+ volume and patient mix", " + visits_k + pct_admitted + pct_high"),
+    ("Admitted patients' time in ED", "LOSadmitted_avg", "+ mix + Ontario monthly level", " + visits_k + pct_admitted + pct_high + ontario_admitted"),
+    ("Time to first doctor assessment", "FirstAssessment_avg", "unadjusted", ""),
+    ("Time to first doctor assessment", "FirstAssessment_avg", "+ volume and patient mix", " + visits_k + pct_admitted + pct_high"),
+]
+print("\nCredit Valley's gap vs Mississauga, before and after adjustment (OLS, n = 26 site-months)")
+reg_rows = []
+for outcome, col, model, extra in MODELS:
+    fit = smf.ols(f"{col} ~ site{extra}", data=reg).fit(cov_type="HC3")
+    term = "site[T.Credit Valley]"
+    lo, hi = fit.conf_int().loc[term]
+    reg_rows.append({"Outcome": outcome, "Model": model, "Gap (h)": fit.params[term],
+                     "95% CI": f"{lo:.1f} to {hi:.1f}", "p": f"{fit.pvalues[term]:.3g}", "R²": fit.rsquared})
+print(pd.DataFrame(reg_rows).round(2).to_string(index=False))
+full = smf.ols("LOSadmitted_avg ~ site + visits_k + pct_admitted + pct_high", data=reg).fit(cov_type="HC3")
+print("\nAdjusted model for admitted patients (coefficients in hours):")
+print(full.summary().tables[1])
