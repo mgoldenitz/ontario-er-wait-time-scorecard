@@ -29,6 +29,10 @@ With 13 months per site, the volume–wait patterns and the regression are explo
 ![Province ranking page](images/province-ranking.png)
 ![Volume and patient mix page](images/volume-patient-mix.png)
 
+![Regression: Credit Valley's gap before and after adjustment](images/regression-gap.png)
+
+*Credit Valley's gap compared with Mississauga, with 95% confidence intervals (OLS, 26 site-months). Adjusting for monthly volume and patient mix doesn't shrink it, so the gap isn't explained by Credit Valley being busier or seeing sicker patients. Made by `er_analysis.py`.*
+
 ## Tools and methods
 
 - **Power Query:** combined 30 CSV exports from a folder, split file names into site, measure and metric, converted `202507`-style months to dates, handled "NV" and "NDA" codes, unpivoted so Ontario becomes its own row (533 rows), and stacked a 4-sheet ranking workbook into one table
@@ -48,13 +52,13 @@ With 13 months per site, the volume–wait patterns and the regression are explo
 | `er_analysis.py` | Python validation, statistics and regression |
 | `data/trends/` | 30 monthly CSV exports, named `Site_Measure_Metric.csv` (avg = average hours, pct = % within target, vol = patient count) |
 | `data/hospital_rankings_2026-07.xlsx` | July 2026 hospital comparison table, one sheet per measure |
-| `images/` | Page screenshots |
+| `images/` | Page screenshots and the regression chart |
 
 ## How to run
 
 **Power BI:** open the `.pbix` in Power BI Desktop. To refresh, go to **Transform data → Data source settings** and point the two sources to your copies of `data/trends/` and `data/hospital_rankings_2026-07.xlsx`.
 
-**Python:** install pandas, numpy, openpyxl and statsmodels (`pip install pandas numpy openpyxl statsmodels`), then run `python er_analysis.py` from the repository folder.
+**Python:** install pandas, numpy, openpyxl, statsmodels and matplotlib (`pip install pandas numpy openpyxl statsmodels matplotlib`), then run `python er_analysis.py` from the repository folder.
 
 ## Data
 

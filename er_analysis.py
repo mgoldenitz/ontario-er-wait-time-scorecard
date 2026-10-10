@@ -5,7 +5,8 @@ Rebuilds the Power BI data model from the raw Ontario Health exports and
 reproduces the key numbers in the report, so they can be checked independently.
 
 Run from the repository folder:   python er_analysis.py
-Needs: pandas, numpy, openpyxl, statsmodels  (pip install pandas numpy openpyxl statsmodels)
+Needs: pandas, numpy, openpyxl, statsmodels, matplotlib
+       (pip install pandas numpy openpyxl statsmodels matplotlib)
 """
 from pathlib import Path
 import numpy as np
@@ -151,3 +152,30 @@ print(pd.DataFrame(reg_rows).round(2).to_string(index=False))
 full = smf.ols("LOSadmitted_avg ~ site + visits_k + pct_admitted + pct_high", data=reg).fit(cov_type="HC3")
 print("\nAdjusted model for admitted patients (coefficients in hours):")
 print(full.summary().tables[1])
+
+# Figure: the gap before and after adjustment (saved to images/regression-gap.png)
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+
+res = pd.DataFrame(reg_rows)
+res[["lo", "hi"]] = res["95% CI"].str.split(" to ", expand=True).astype(float)
+fig, axes = plt.subplots(1, 2, figsize=(12, 3.8), gridspec_kw={"width_ratios": [3, 2]})
+for ax, outcome in zip(axes, res["Outcome"].unique()):
+    r = res[res["Outcome"] == outcome].iloc[::-1].reset_index(drop=True)
+    ax.errorbar(r["Gap (h)"], r.index, xerr=[r["Gap (h)"] - r["lo"], r["hi"] - r["Gap (h)"]],
+                fmt="o", color="#426871", ecolor="#87ACB6", elinewidth=2, capsize=4, ms=8)
+    for i, g in enumerate(r["Gap (h)"]):
+        ax.annotate(f"{g:.1f} h", (g, i), textcoords="offset points", xytext=(0, 9), ha="center", fontsize=9)
+    ax.axvline(0, color="#6B7280", lw=1, ls="--")
+    ax.set_yticks(r.index, [m[0].upper() + m[1:] for m in r["Model"]])
+    ax.set_ylim(-0.6, len(r) - 0.4)
+    ax.set_xlim(left=min(-0.5, r["lo"].min() - 0.5))
+    ax.set_title(outcome, fontsize=11, loc="left")
+    ax.set_xlabel("Credit Valley minus Mississauga, hours (95% CI)", fontsize=9)
+    ax.spines[["top", "right"]].set_visible(False)
+fig.suptitle("Credit Valley's longer waits remain after adjusting for volume and patient mix "
+             "(26 site-months, Jul 2025 to Jul 2026)", fontsize=11.5, x=0.01, ha="left")
+fig.tight_layout(rect=(0, 0, 1, 0.93), w_pad=3)
+fig.savefig(Path(__file__).parent / "images" / "regression-gap.png", dpi=200, bbox_inches="tight")
+print("\nSaved images/regression-gap.png")
