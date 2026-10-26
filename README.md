@@ -44,7 +44,7 @@ With 13 months per site, the volume and wait-time correlations and the regressio
 ## Repository contents
 
 - `ER_Wait_Time_Scorecard.pbix`: the Power BI report (open with Power BI Desktop)
-- `Goldenitz_ER_Wait_Time_Scorecard.pdf`: a static PDF of all five pages
+- `ER_Wait_Time_Scorecard.pdf`: a static PDF of all five pages
 - `er_analysis.py`: Python validation, statistics and regression
 - `data/trends/`: 30 monthly CSV exports named `Site_Measure_Metric.csv` (avg = average hours, pct = % within target, vol = patient count)
 - `data/hospital_rankings_2026-07.xlsx`: the July 2026 hospital comparison table, one sheet per measure
