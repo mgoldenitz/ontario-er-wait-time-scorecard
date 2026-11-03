@@ -43,22 +43,20 @@ With 13 months per site, the volume and wait-time correlations and the regressio
 
 ## Repository contents
 
-- `ER_Wait_Time_Scorecard.pbix`: the Power BI report (open with Power BI Desktop)
 - `ER_Wait_Time_Scorecard.pdf`: a static PDF of all five pages
 - `er_analysis.py`: Python validation, statistics and regression
-- `data/trends/`: 30 monthly CSV exports named `Site_Measure_Metric.csv` (avg = average hours, pct = % within target, vol = patient count)
-- `data/hospital_rankings_2026-07.xlsx`: the July 2026 hospital comparison table, one sheet per measure
+- `data/README.md`: how to download the 30 monthly CSV exports and the July 2026 hospital comparison table, which are not stored here (see Data)
 - `images/`: page screenshots and the regression chart
 
 ## How to run
 
-Power BI: open the `.pbix` in Power BI Desktop. To refresh, go to Transform data > Data source settings and point the two sources to your copies of `data/trends/` and `data/hospital_rankings_2026-07.xlsx`.
+Download the source files as described in `data/README.md`. Then:
 
 Python: install pandas, numpy, openpyxl, statsmodels and matplotlib (`pip install pandas numpy openpyxl statsmodels matplotlib`), then run `python er_analysis.py` from the repository folder.
 
 ## Data
 
-Ontario Health, [Time Spent in Emergency Departments](https://ontariohealth.ca/system/reporting/performance/time-spent-in-emergency-departments), based on the National Ambulatory Care Reporting System (NACRS) from the Canadian Institute for Health Information (CIHI). Exported September 2026. All data is public and aggregated. No patient-level data was used.
+Ontario Health, [Time Spent in Emergency Departments](https://ontariohealth.ca/system/reporting/performance/time-spent-in-emergency-departments), based on the National Ambulatory Care Reporting System (NACRS) from the Canadian Institute for Health Information (CIHI). Exported September 2026. All data is public and aggregated. No patient-level data was used. The exports and the .pbix file (which stores the same data in its model) are not in this repository, because Ontario Health's [Terms & Conditions](https://ontariohealth.ca/terms-conditions.html) require written permission to reproduce its content.
 
 Definitions: low urgency is CTAS 4 to 5 (target 4 h); high urgency is CTAS 1 to 3, not admitted (target 8 h); admitted patients have an 8 h target. The provincial goal is 90% of patients within target. Queensway Health Centre is an urgent care centre with no admissions, so it is not directly comparable to a full ED.
 
