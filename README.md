@@ -63,4 +63,4 @@ Definitions: low urgency is CTAS 4 to 5 (target 4 h); high urgency is CTAS 1 to 
 ## Author
 
 Michael Goldenitz, Applied Data Analytics and Visualization, Sheridan College. HBSc Psychology and Philosophy, University of Toronto Mississauga.
-[LinkedIn](https://www.linkedin.com/in/michael-goldenitz-790509265/) · [GitHub](https://github.com/mgoldenitz)
+[LinkedIn](https://www.linkedin.com/in/michael-goldenitz/) · [GitHub](https://github.com/mgoldenitz)
