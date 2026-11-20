@@ -29,7 +29,7 @@ With 13 months per site, the volume and wait-time correlations as well as the re
 
 ![Regression: Credit Valley's gap before and after adjustment](images/regression-gap.png)
 
-*Credit Valley's gap compared with Mississauga, with 95% confidence intervals (OLS, 26 site-months). The gap does not shrink after adjusting for monthly volume and patient mix, so Credit Valley being busier or seeing more serious and life-threatening conditions does not explain it. Made by `er_analysis.py`.*
+*Credit Valley's gap compared with Mississauga, with 95% confidence intervals (OLS, 26 site-months). The gap does not shrink after adjusting for monthly volume and patient mix, so Credit Valley being busier or seeing more serious and life-threatening conditions does not explain it. Created with `er_analysis.py`.*
 
 ## How it was built
 
