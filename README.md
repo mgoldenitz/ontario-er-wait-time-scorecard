@@ -44,6 +44,7 @@ With 13 months per site, the volume and wait-time correlations as well as the re
 ## Repository contents
 
 - `ER_Wait_Time_Scorecard.pdf`: a static PDF of all five pages
+- `ER_Wait_Time_Scorecard.pbix`: a Power BI file for exploration of the data
 - `er_analysis.py`: Python validation, statistics and regression
 - `data/README.md`: how to download the 30 monthly CSV exports and the July 2026 hospital comparison table, which are not stored here (see Data)
 - `images/`: page screenshots and the regression chart
