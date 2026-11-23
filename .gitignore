@@ -1,3 +1,11 @@
 data/trends/
 data/*.xlsx
 *.pbix
+
+# Local files
+thumbnails/
+linkedin_featured_section.md
+linkedin_project_section.md
+power_bi_text_box_rewrites.md
+style-samples.md
+writing-style.md
