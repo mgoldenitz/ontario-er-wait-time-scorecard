@@ -41,6 +41,12 @@ With 13 months per site, the volume and wait-time correlations as well as the re
 - The regression (statsmodels) is ordinary least squares with robust (HC3) standard errors. It tests whether Credit Valley's gap shrinks once monthly volume, share admitted and share of high-urgency patients are controlled for. The admitted-patient gap goes from 7.3 h unadjusted to 8.3 h adjusted, and to 9.4 h when Ontario's monthly level is also included. The time-to-first-doctor gap stays at about 0.9 h.
 - A hidden QA page in the report was cross-checked against the Python output.
 
+## Diagrams
+
+![Data flow](images/diagram-dataflow.svg)
+
+Ontario Health exports to the Power BI scorecard, checked by er_analysis.py.
+
 ## Repository contents
 
 - `ER_Wait_Time_Scorecard.pdf`: a static PDF of all five pages
