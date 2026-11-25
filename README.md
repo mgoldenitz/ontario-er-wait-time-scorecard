@@ -59,7 +59,7 @@ Ontario Health exports to the Power BI scorecard, checked by er_analysis.py.
 
 Download the source files as described in `data/README.md`. Then:
 
-Python: install pandas, numpy, openpyxl, statsmodels and matplotlib (`pip install pandas numpy openpyxl statsmodels matplotlib`), then run `python er_analysis.py` from the repository folder.
+Python: install the dependencies (`pip install -r requirements.txt`), then run `python er_analysis.py` from the repository folder.
 
 ## Data
 
